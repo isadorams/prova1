@@ -44,5 +44,14 @@ with open("objetos.pkl", "rb") as arquivo:
   #st.write("Probabilidades")
   #st.write(predicao)
     
+ # Visualização Gráfica
+st.title('Visualização Gráfica')
+# Grafico de correlção
+plt.subplots(figsize=(5, 5)) 
+sns.heatmap(train.corr(), annot=True, cmap='Blues')
+ax.set_title('Correlação dos dados')
+fig.tight_layout()
+st.pyplot(fig)
+    
 
  
