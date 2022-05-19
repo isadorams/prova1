@@ -18,22 +18,22 @@ with open("objetos.pkl", "rb") as arquivo:
 
   estrutura = {'perimeter': perimeter, 'area': area, 'compactness': compactness, 'concavity': concavity}
   df = pd.DataFrame(estrutura, index=[0])
+ 
+  #st.write("### Parâmetros de Entrada")
+  #st.write(df)
   
-  st.write("### Parâmetros de Entrada")
-  st.write(df)
+  #df = ss.transform(df)
+  #st.write(df)
   
-  df = ss.transform(df)
-  st.write(df)
+  #predicao = classifier.predict(df)
+  #st.write(f"A classe é: **{predicao[0]}**")
   
-  predicao = classifier.predict(df)
-  st.write(f"A classe é: **{predicao[0]}**")
+  #predicao = classifier.predict_proba(df)
+  #predicao = pd.DataFrame(predicao)
+  #predicao.rename({
+     #'M' : 0,
+     #'B' : 1
+  #}, axis=1, inplace=True)
   
-  predicao = classifier.predict_proba(df)
-  predicao = pd.DataFrame(predicao)
-  predicao.rename({
-     'M' : 0,
-     'B' : 1
-  }, axis=1, inplace=True)
-  
-  st.write("Probabilidades")
-  st.write(predicao)
+  #st.write("Probabilidades")
+  #st.write(predicao)
