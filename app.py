@@ -22,6 +22,7 @@ with open("objetos.pkl", "rb") as arquivo:
  
   st.write("### Parâmetros de Entrada")
   st.write(df)
+  st.DataFrame(df)
   
   #df = ss.transform(df)
   #st.write(df)
