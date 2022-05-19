@@ -4,8 +4,10 @@ import pandas as pd
 #import seaborn as sns
 #import plotly.express as px
 import pickle
+import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeClassifier
+
 
 st.title('Relatórios Breast Cancer Wisconsin')
 #st.write("## Breast Cancer Wisconsin")
@@ -38,10 +40,14 @@ st.write( """ b. área (medida total que uma figura ocupa no plano)""" )
 st.write( """ c. compacidade (perímetro^2 / área - 1,0)""" )
 st.write( """ d. concavidade (severidade das porções côncavas do contorno).""" )
 
-df = pd.DataFrame(np.random.randn(30,2),columns=['perimeter','area','compactness','concavity'])
-st.line_chart(df)
-st.area_chart(df)
-st.bar_chart(df)
+
+def load_data():
+    df = pd.DataFrame(np.random.randn(20, 3), columns=["perimeter", "area", "compactness", "concavity"])
+    return df
+
+chart_data = load_data()
+
+st.area_chart(chart_data)
   
   #df = ss.transform(df)
   #st.write(df)
