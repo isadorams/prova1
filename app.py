@@ -39,9 +39,5 @@ with open("objetos.pkl", "rb") as arquivo:
   #st.write("Probabilidades")
   #st.write(predicao)
     
-st.area_chart(data=None, width=0, height=0, use_container_width=True)
-chart_data = pd.DataFrame(
-    np.random.randn(20, 3),
-    columns=['perimeter', 'area', 'compactness', 'concavity'])
-st.area_chart(chart_data)    
+
  
