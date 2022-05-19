@@ -33,10 +33,10 @@ with open("objetos.pkl", "rb") as arquivo:
   st.write(df)
   
 st.write("### Informações do atributo:")
-st.write( """ a.perímetro(soma dos tamanhos dos lados da figura)""" )
-st.write( """ b.área (medida total que uma figura ocupa no plano)""" )
-st.write( """ c.compacidade (perímetro^2 / área - 1,0)""" )
-st.write( """ d.concavidade (severidade das porções côncavas do contorno).""" )
+st.write( """ a. perímetro(soma dos tamanhos dos lados da figura)""" )
+st.write( """ b. área (medida total que uma figura ocupa no plano)""" )
+st.write( """ c. compacidade (perímetro^2 / área - 1,0)""" )
+st.write( """ d. concavidade (severidade das porções côncavas do contorno).""" )
   
   #df = ss.transform(df)
   #st.write(df)
