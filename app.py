@@ -39,9 +39,5 @@ with open("objetos.pkl", "rb") as arquivo:
   #st.write("Probabilidades")
   #st.write(predicao)
     
-df = pd.DataFrame(
-    np.random.randn(10, 20),
-    columns=('perimeter', 'area', 'compactness', 'concavity')
 
-st.dataframe(df.style.highlight_max(axis=0))
  
