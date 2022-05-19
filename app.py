@@ -19,8 +19,8 @@ with open("objetos.pkl", "rb") as arquivo:
   estrutura = {'perimeter': perimeter, 'area': area, 'compactness': compactness, 'concavity': concavity}
   df = pd.DataFrame(estrutura, index=[0])
  
-  #st.write("### Parâmetros de Entrada")
-  #st.write(df)
+  st.write("### Parâmetros de Entrada")
+  st.write(df)
   
   #df = ss.transform(df)
   #st.write(df)
