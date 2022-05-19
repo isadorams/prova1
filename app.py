@@ -40,7 +40,7 @@ st.write( """ b. área (medida total que uma figura ocupa no plano)""" )
 st.write( """ c. compacidade (perímetro^2 / área - 1,0)""" )
 st.write( """ d. concavidade (severidade das porções côncavas do contorno).""" )
 
-
+@st.experimental_memo 
 def load_data():
     df = pd.DataFrame(np.random.randn(20, 3), columns=["perimeter", "area", "compactness", "concavity"])
     return df
