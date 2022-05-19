@@ -14,7 +14,7 @@ compactness = st.sidebar.slider("Compactness", 0.01, 1.6, 0.25)
 concavity = st.sidebar.slider("Concavity", 0.0, 1.30, 0.27)
     
 with open("objetos.pkl", "rb") as arquivo:
-  ss, dtc = pickle.load(arquivo)
+  ss, classifier = pickle.load(arquivo)
 
   estrutura = {'perimeter': perimeter, 'area': area, 'compactness': compactness, 'concavity': concavity}
   df = pd.DataFrame(estrutura, index=[0])
@@ -25,10 +25,10 @@ with open("objetos.pkl", "rb") as arquivo:
   df = ss.transform(df)
   st.write(df)
   
-  predicao = dtc.predict(df)
+  predicao = classifier.predict(df)
   st.write(f"A classe é: **{predicao[0]}**")
   
-  predicao = dtc.predict_proba(df)
+  predicao = classifier.predict_proba(df)
   predicao = pd.DataFrame(predicao)
   predicao.rename({
      'M' : 0,
