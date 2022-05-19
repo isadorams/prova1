@@ -8,9 +8,14 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeClassifier
 
 st.title('Relatórios Breast Cancer Wisconsin')
-st.write("## Classificação quanto ao Câncer")
 #st.write("## Breast Cancer Wisconsin")
-
+st.write("### Informações do conjunto de dados:)
+st.write(
+    """As características são computadas a partir de uma imagem digitalizada de um aspirado
+    por agulha fina (PAAF) de uma massa mamária.Eles descrevem características 
+    dos núcleos celulares presentes na imagem.."""
+)
+         
 st.sidebar.write("### Parâmetros")
 perimeter = st.sidebar.slider("Perimeter", 40.0, 190.0, 100.0)
 area= st.sidebar.slider("Area", 184.0, 4254.0, 881.0)
@@ -27,6 +32,13 @@ with open("objetos.pkl", "rb") as arquivo:
   st.write("### Parâmetros de Entrada")
   st.write(df)
   
+st.write("### Informações do atributo:)
+st.write(
+    """ a.perímetro
+        b.área
+        c.compacidade (perímetro^2 / área - 1,0)
+        d.concavidade (severidade das porções côncavas do contorno)."""
+)
   
   #df = ss.transform(df)
   #st.write(df)
@@ -45,13 +57,7 @@ with open("objetos.pkl", "rb") as arquivo:
   #st.write(predicao)
     
  # Visualização Gráfica
-st.title('Visualização Gráfica')
-# Grafico de correlção
-plt.subplots(figsize=(5, 5)) 
-sns.heatmap(train.corr(), annot=True, cmap='Blues')
-ax.set_title('Correlação dos dados')
-fig.tight_layout()
-st.pyplot(fig)
+
     
 
  
