@@ -12,6 +12,12 @@ perimeter = st.sidebar.slider("Perimeter", 40.0, 190.0, 100.0)
 area= st.sidebar.slider("Area", 184.0, 4254.0, 881.0)
 compactness = st.sidebar.slider("Compactness", 0.01, 1.6, 0.25)
 concavity = st.sidebar.slider("Concavity", 0.0, 1.30, 0.27)
+
+st.area_chart(data=None, width=0, height=0, use_container_width=True)
+chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns=['perimeter', 'area', 'compactness', 'concavity'])
+st.area_chart(chart_data)
     
 with open("objetos.pkl", "rb") as arquivo:
   ss, classifier = pickle.load(arquivo)
@@ -37,9 +43,4 @@ with open("objetos.pkl", "rb") as arquivo:
   
   #st.write("Probabilidades")
   #st.write(predicao)
- st.area_chart(data=None, width=0, height=0, use_container_width=True)
-
- chart_data = pd.DataFrame(
-     np.random.randn(20, 3),
-     columns=['perimeter', 'area', 'compactness', 'concavity'])
- st.area_chart(chart_data)
+ 
