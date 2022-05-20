@@ -56,7 +56,7 @@ with open("objetos.pkl", "rb") as arquivo:
                'radius1': [radius1], 'texture1': [texture1], 'smoothness1': [smoothness1], 'concave_points1': [concave_points1],
                'symmetry1': [symmetry1], 'fractal_dimension1': [fractal_dimension1], 
                'radius2': [radius2],'texture2':[texture2], 'smoothness2': [smoothness2], 'concave_points2':[concave_points2],
-               'symmetry2':[symmetry2], 'fractal_dimension2': [fractal_dimension2], }
+               'symmetry2':[symmetry2], 'fractal_dimension2': [fractal_dimension2]}
   df = pd.DataFrame(estrutura, index=[0])
  
   st.write("### Parâmetros de Entrada")
