@@ -18,7 +18,7 @@ st.write(
     por agulha fina (PAAF) de uma massa mamária.Eles descrevem características 
     dos núcleos celulares presentes na imagem..""" )
 
-image = Image.open('celulas.png')
+image = Image.open('C:\Users\isadora skibinski\Downloads')
 st.image(image, caption = 'This is a picture', use_column_width = True)
 
 st.header("Conjunto de dados:")
