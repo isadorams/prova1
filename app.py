@@ -64,7 +64,8 @@ with open("objetos.pkl", "rb") as arquivo:
     
   df = ss.transform(df)
   st.write(df)
- """
+  
+  """
   predicao = classifier.predict([df.values])
   st.write("**A classe desse cancer é:**")
   st.write(predicao)
