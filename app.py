@@ -20,8 +20,6 @@ st.write(
 
 #image = Image.open(r'C:\Users\isadora skibinski\Downloads\celulas.png', 'r')
 #st.image(image, caption = 'This is a picture', use_column_width = True)
-train = pd.read_csv(r'C:\Users\isadora skibinski\Downloads\'wdbc.csv', 'r')
-st.dataframe(train)
 
 st.header("Conjunto de dados:")
 dataframe = pd.DataFrame(np.random.randn(10, 20),
