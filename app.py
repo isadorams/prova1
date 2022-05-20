@@ -24,6 +24,8 @@ dataframe = pd.DataFrame(np.random.randn(10, 20),
 st.write(dataframe)
 st.header('Visualização do gráfico de área.')
 st.area_chart(dataframe)
+st.header('Visualização do histograma.')
+st.bar_chart(dataframe)
          
 st.sidebar.write("### Parâmetros")
 perimeter = st.sidebar.slider("Perimeter", 40.0, 190.0, 100.0)
