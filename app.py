@@ -41,11 +41,11 @@ concavity = st.sidebar.slider("Concavity", 0.0, 1.30, 0.27)
 with open("objetos.pkl", "rb") as arquivo:
   ss, classifier = pickle.load(arquivo)
 
-  estrutura = {'perimeter': perimeter, 'area': area, 'compactness': compactness, 'concavity': concavity}
-  df = pd.DataFrame(estrutura, index=[0])
+  #estrutura = {'perimeter': perimeter, 'area': area, 'compactness': compactness, 'concavity': concavity}
+  #df = pd.DataFrame(estrutura, index=[0])
  
   st.write("### Parâmetros de Entrada")
-  st.write(df)
+  #st.write(df)
   
   st.dataframe(df)
   #df_sample = df.head()
