@@ -23,7 +23,7 @@ st.header("Conjunto de dados:")
 IMAGE_URL = "https://miro.medium.com/max/1400/1*51Hm0b9RlgnPVQLariliRw.png"
 st.image(IMAGE_URL, caption="amostra dos dados")
 
-st.sidebar.write("### Parâmetros")
+st.sidebar.write("### Parâmetros") #barra lateral com interatividade
 radius = st.sidebar.slider("Radius", 7.8, 36.0, 6.3, 0.1)
 texture = st.sidebar.slider("Texture", 11.0, 50.0, 26.0, 0.1)
 perimeter = st.sidebar.slider("Perimeter", 40.0, 190.0, 100.0)
@@ -62,20 +62,20 @@ with open("objetos.pkl", "rb") as arquivo:
   df = ss.transform(df)
   st.write(df)
   
-  predicao = classifier.predict(df)
-  st.write("**A classe desse cancer é:**")
-  st.write(predicao)
+  #predicao = classifier.predict(df)
+  #st.write("**A classe desse cancer é:**")
+  #st.write(predicao)
   
-  predicao = classifier.predict_proba(df)
-  predicao = pd.DataFrame(predicao)
-  predicao.rename({
-     0: "M",
-     1: "B",
-     2: "inválido"
-  }, axis=1, inplace=True)
+  #predicao = classifier.predict_proba(df)
+  #predicao = pd.DataFrame(predicao)
+  #predicao.rename({
+     #0: "M",
+     #1: "B",
+     #2: "inválido"
+  #}, axis=1, inplace=True)
   
-  st.write("Probabilidades")
-  st.write(predicao)
+  #st.write("Probabilidades")
+  #st.write(predicao)
   
   dataframe = pd.DataFrame(np.random.randn(10, 20),
   columns = ('col %d' % i
