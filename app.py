@@ -32,18 +32,18 @@ symmetry0 = st.sidebar.slider("0symmetry", 0.12, 1.0, 1.0)
 fractal_dimension0 = st.sidebar.slider("0fractal_dimension", 0.05, 1.0, 1.0)
 
 radius1 = st.sidebar.slider("Radius1", 1.0, 3.0, 1.0)
-texture2 = st.sidebar.slider("Texture1", 1.0, 5.0, 2.0)
-smoothness1 = st.sidebar.slider("Smoothness1", 0.0, 1.0, 1.0)
-concave_points1 = st.sidebar.slider("Compactness1", 0.0, 1.0, 1.0)
-symmetry1 = st.sidebar.slider("Concavity1", 0.0, 1.0, 1.0)
-fractal_dimension1 = st.sidebar.slider("Concave1", 0.0, 1.0, 1.0)
+texture1 = st.sidebar.slider("Texture1", 1.0, 5.0, 2.0)
+smoothness1 = st.sidebar.slider("smoothness1", 0.0, 1.0, 1.0)
+concave_points1 = st.sidebar.slider("concave_points1", 0.0, 1.0, 1.0)
+symmetry1 = st.sidebar.slider("symmetry1", 0.0, 1.0, 1.0)
+fractal_dimension1 = st.sidebar.slider("fractal_dimension1", 0.0, 1.0, 1.0)
 
-radius2 = st.sidebar.slider("Smoothness1", 8.0, 37.0, 17.0)
-texture2 = st.sidebar.slider("Compactness1", 12.0, 50.0, 26.0)
-smoothness2 = st.sidebar.slider("Concavity1", 0.0, 1.0, 1.0)
-concave_points2 = st.sidebar.slider("Concave1", 0.0, 1.0, 1.0)
-symmetry0 = st.sidebar.slider("Compactness1", 0.2, 1.0, 1.0)
-fractal_dimension2 = st.sidebar.slider("Concave1", 0.0, 1.0, 1.0)
+radius2 = st.sidebar.slider("radius2", 8.0, 37.0, 17.0)
+texture2 = st.sidebar.slider("texture2", 12.0, 50.0, 26.0)
+smoothness2 = st.sidebar.slider("smoothness2", 0.0, 1.0, 1.0)
+concave_points2 = st.sidebar.slider("concave_points2", 0.0, 1.0, 1.0)
+symmetry0 = st.sidebar.slider("symmetry0", 0.2, 1.0, 1.0)
+fractal_dimension2 = st.sidebar.slider("fractal_dimension2", 0.0, 1.0, 1.0)
 
 with open("objetos.pkl", "rb") as arquivo:
   ss, classifier = pickle.load(arquivo)
@@ -54,7 +54,7 @@ with open("objetos.pkl", "rb") as arquivo:
   estrutura = {'radius0': [radius0], 'texture0': [texture0], 'smoothness0': [smoothness0], 'concave_points0':[concave_points0], 'symmetry0':[symmetry0], 
                'fractal_dimension0': [fractal_dimension0], 
                'radius1': [radius1], 'texture1': [texture1], 'smoothness1': [smoothness1], 'concave_points1': [concave_points1],
-               'symmetry1': [symmetry1], 'fractal_dimension0': [fractal_dimension0], 
+               'symmetry1': [symmetry1], 'fractal_dimension1': [fractal_dimension1], 
                'radius2': [radius2],'texture2':[texture2], 'smoothness2': [smoothness2], 'concave_points2':[concave_points2],
                'symmetry2':[symmetry2], 'fractal_dimension2': [fractal_dimension2], }
   df = pd.DataFrame(estrutura, index=[0])
