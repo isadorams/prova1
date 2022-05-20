@@ -23,15 +23,6 @@ st.header("Conjunto de dados:")
 IMAGE_URL = "https://miro.medium.com/max/1400/1*51Hm0b9RlgnPVQLariliRw.png"
 st.image(IMAGE_URL, caption="Sunrise by the mountains")
 
-dataframe = pd.DataFrame(np.random.randn(10, 20),
-  columns = ('col %d' % i
-    for i in range(20)))
-st.write(dataframe)
-st.header('Visualização do gráfico de área.')
-st.area_chart(dataframe)
-st.header('Visualização do histograma.')
-st.bar_chart(dataframe)
-         
 st.sidebar.write("### Parâmetros")
 perimeter = st.sidebar.slider("Perimeter", 40.0, 190.0, 100.0)
 area= st.sidebar.slider("Area", 184.0, 4254.0, 881.0)
@@ -73,13 +64,23 @@ with open("objetos.pkl", "rb") as arquivo:
   #st.write(predicao)
     
    
-  st.header("Informações do atributo:")
-  st.write( """ a. perímetro(soma dos tamanhos dos lados da figura)""" )
-  st.write( """ b. área (medida total que uma figura ocupa no plano)""" )
-  st.write( """ c. compacidade (perímetro^2 / área - 1,0)""" )
-  st.write( """ d. concavidade (severidade das porções côncavas do contorno).""" )
+ st.header("Informações do atributo:")
+ st.write( """ a. perímetro(soma dos tamanhos dos lados da figura)""" )
+ st.write( """ b. área (medida total que uma figura ocupa no plano)""" )
+ st.write( """ c. compacidade (perímetro^2 / área - 1,0)""" )
+ st.write( """ d. concavidade (severidade das porções côncavas do contorno).""" )
 
-  
+
+dataframe = pd.DataFrame(np.random.randn(10, 20),
+  columns = ('col %d' % i
+    for i in range(20)))
+st.write(dataframe)
+st.header('Visualização do gráfico de área.')
+st.area_chart(dataframe)
+st.header('Visualização do histograma.')
+st.bar_chart(dataframe)
+         
+
 
     
 
