@@ -15,8 +15,12 @@ st.header("Informações do conjunto de dados:")
 st.write(
     """As características são computadas a partir de uma imagem digitalizada de um aspirado
     por agulha fina (PAAF) de uma massa mamária.Eles descrevem características 
-    dos núcleos celulares presentes na imagem.."""
-)
+    dos núcleos celulares presentes na imagem..""" )
+
+dataframe = pd.DataFrame(np.random.randn(10, 20),
+  columns = ('col %d' % i
+    for i in range(20)))
+st.write(dataframe)
          
 st.sidebar.write("### Parâmetros")
 perimeter = st.sidebar.slider("Perimeter", 40.0, 190.0, 100.0)
