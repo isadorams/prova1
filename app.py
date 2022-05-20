@@ -11,7 +11,7 @@ from sklearn.tree import DecisionTreeClassifier
   
 st.title('Relatórios Breast Cancer Wisconsin')
 #st.write("## Breast Cancer Wisconsin")
-st.write("### Informações do conjunto de dados:")
+st.header("Informações do conjunto de dados:")
 st.write(
     """As características são computadas a partir de uma imagem digitalizada de um aspirado
     por agulha fina (PAAF) de uma massa mamária.Eles descrevem características 
@@ -51,7 +51,7 @@ with open("objetos.pkl", "rb") as arquivo:
   #st.write(predicao)
     
    
-  st.write("### Informações do atributo:")
+  st.header("Informações do atributo:")
   st.write( """ a. perímetro(soma dos tamanhos dos lados da figura)""" )
   st.write( """ b. área (medida total que uma figura ocupa no plano)""" )
   st.write( """ c. compacidade (perímetro^2 / área - 1,0)""" )
