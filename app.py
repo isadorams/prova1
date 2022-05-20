@@ -31,15 +31,18 @@ st.area_chart(dataframe)
 st.header('Visualização do histograma.')
 st.bar_chart(dataframe)
          
-st.sidebar.write("### Parâmetros")
-perimeter = st.sidebar.slider("Perimeter", 40.0, 190.0, 100.0)
-area= st.sidebar.slider("Area", 184.0, 4254.0, 881.0)
-compactness = st.sidebar.slider("Compactness", 0.01, 1.6, 0.25)
-concavity = st.sidebar.slider("Concavity", 0.0, 1.30, 0.27)
+#st.sidebar.write("### Parâmetros")
+#perimeter = st.sidebar.slider("Perimeter", 40.0, 190.0, 100.0)
+#area= st.sidebar.slider("Area", 184.0, 4254.0, 881.0)
+#compactness = st.sidebar.slider("Compactness", 0.01, 1.6, 0.25)
+#concavity = st.sidebar.slider("Concavity", 0.0, 1.30, 0.27)
 
     
-with open("objetos.pkl", "rb") as arquivo:
-  ss, classifier = pickle.load(arquivo)
+#with open("objetos.pkl", "rb") as arquivo:
+  #ss, classifier = pickle.load(arquivo)
+  
+  #df = pd.read_csv('wdbc.csv', names = colunas)
+  df = pd.read_csv("C:/Users/isadora skibinski/Downloads/wdbc.csv")
 
   #estrutura = {'perimeter': perimeter, 'area': area, 'compactness': compactness, 'concavity': concavity}
   #df = pd.DataFrame(estrutura, index=[0])
@@ -47,7 +50,8 @@ with open("objetos.pkl", "rb") as arquivo:
   st.write("### Parâmetros de Entrada")
   #st.write(df)
   
-  st.dataframe(df)
+  
+  #st.dataframe(df)
   #df_sample = df.head()
   #df_sample
     
