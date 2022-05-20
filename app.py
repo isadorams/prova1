@@ -61,7 +61,7 @@ with open("objetos.pkl", "rb") as arquivo:
     
   df = ss.transform(df)
   st.write(df)
-  
+  """
   predicao = classifier.predict(df)
   st.write("**A classe desse cancer é:**")
   st.write(predicao)
@@ -76,7 +76,7 @@ with open("objetos.pkl", "rb") as arquivo:
   
   st.write("Probabilidades")
   st.write(predicao)
-  
+  """
   dataframe = pd.DataFrame(np.random.randn(10, 20), #dataframe como uma tabela interativa
   columns = ('col %d' % i
     for i in range(20)))
@@ -92,7 +92,6 @@ with open("objetos.pkl", "rb") as arquivo:
   st.write( """ b. área (medida total que uma figura ocupa no plano)""" )
   st.write( """ c. compacidade (perímetro^2 / área - 1,0)""" )
   st.write( """ d. concavidade (severidade das porções côncavas do contorno).""" )
-
 
 
          
