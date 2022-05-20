@@ -24,7 +24,7 @@ IMAGE_URL = "https://miro.medium.com/max/1400/1*51Hm0b9RlgnPVQLariliRw.png"
 st.image(IMAGE_URL, caption="amostra dos dados")
 
 st.sidebar.write("### Parâmetros") #barra lateral com interatividade
-0radius = st.sidebar.slider("0radius", 7.0, 29.0, 15.0)
+radius0 = st.sidebar.slider("0radius", 7.0, 29.0, 15.0)
 0texture = st.sidebar.slider("0texture", 10.0, 40.0, 20.0)
 0smoothness = st.sidebar.slider("0smoothness", 0.06, 1.0, 1.0)
 0concave_points = st.sidebar.slider("0concave_points", 1.0, 1.0, 1.0)
@@ -51,7 +51,7 @@ with open("objetos.pkl", "rb") as arquivo:
   #df = pd.read_csv('wdbc.csv', names = colunas)
  
 
-  estrutura = {'0radius': [0radius], '0texture': [0texture], '0smoothness': [0smoothness], '0concave_points':[0concave_points], '0symmetry':[0symmetry], 
+  estrutura = {'radius0': [radius0], '0texture': [0texture], '0smoothness': [0smoothness], '0concave_points':[0concave_points], '0symmetry':[0symmetry], 
                '0fractal_dimension': [0fractal_dimension], '1radius': [1radius], '1texture': [1texture], '1smoothness': [1smoothness],
                '1concave_points': [1concave_points], '1symmetry': [1symmetry], '1fractal_dimension': [1fractal_dimension], '2radius': [2radius], 
                '2texture':[2texture], '2smoothness': [2smoothness], '2concave_points':[2concave_points],'2symmetry':[2symmetry], '2fractal_dimension': [2fractal_dimension], }
