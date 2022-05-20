@@ -1,16 +1,17 @@
 import streamlit as st
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import pandas as pd
 #import seaborn as sns
 #import plotly.express as px
 import pickle
 import numpy as np
 from sklearn.preprocessing import StandardScaler
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
 from PIL import Image
 
   
 st.title('Relatórios Breast Cancer Wisconsin')
+df = pd.read_csv("C:/Users/isadora skibinski/Downloads/wdbc.csv")
 
 st.header("Informações do conjunto de dados:")
 st.write(
@@ -42,7 +43,7 @@ st.bar_chart(dataframe)
   #ss, classifier = pickle.load(arquivo)
   
   #df = pd.read_csv('wdbc.csv', names = colunas)
-  df = pd.read_csv("C:/Users/isadora skibinski/Downloads/wdbc.csv")
+ 
 
   #estrutura = {'perimeter': perimeter, 'area': area, 'compactness': compactness, 'concavity': concavity}
   #df = pd.DataFrame(estrutura, index=[0])
