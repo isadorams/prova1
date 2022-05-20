@@ -1,8 +1,6 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
-#import seaborn as sns
-#import plotly.express as px
 import pickle
 import numpy as np
 from sklearn.preprocessing import StandardScaler
@@ -48,7 +46,7 @@ st.bar_chart(dataframe)
   #estrutura = {'perimeter': perimeter, 'area': area, 'compactness': compactness, 'concavity': concavity}
   #df = pd.DataFrame(estrutura, index=[0])
  
-  st.write("### Parâmetros de Entrada")
+  #st.write("### Parâmetros de Entrada")
   #st.write(df)
   
   
