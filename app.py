@@ -21,6 +21,8 @@ dataframe = pd.DataFrame(np.random.randn(10, 20),
   columns = ('col %d' % i
     for i in range(20)))
 st.write(dataframe)
+st.write('This is a area_chart.')
+st.area_chart(dataframe)
          
 st.sidebar.write("### Parâmetros")
 perimeter = st.sidebar.slider("Perimeter", 40.0, 190.0, 100.0)
