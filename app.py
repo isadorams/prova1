@@ -16,7 +16,7 @@ st.write(
     por agulha fina (PAAF) de uma massa mamária.Eles descrevem características 
     dos núcleos celulares presentes na imagem..""" )
 
-IMAGE_URL = "https://www.google.com/search?q=Breast+Cancer+Wisconsin&tbm=isch&ved=2ahUKEwinsteOx-73AhWOMrkGHZi3CPkQ2-cCegQIABAA&oq=Breast+Cancer+Wisconsin&gs_lcp=CgNpbWcQAzoECCMQJzoKCAAQsQMQgwEQQzoICAAQgAQQsQM6BQgAEIAEOgQIABBDOgYIABAeEAg6BAgAEB46BAgAEBg6BwgjEOoCECdQhwNY239ghIsBaAZwAHgEgAHfAYgBsw6SAQUwLjkuMpgBAKABAaoBC2d3cy13aXotaW1nsAEKwAEB&sclient=img&ei=dsmHYqefJI7l5OUPmO-iyA8&bih=657&biw=1366&rlz=1C1CHZN_pt-BRBR949BR949#imgrc=OkMtiOfVEDrhJM"
+IMAGE_URL = "https://levelup.gitconnected.com/diagnosing-breast-cancer-using-machine-learning-d56e4b1d4364"
 st.image(IMAGE_URL, caption="Sunrise by the mountains")
 
 
