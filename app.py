@@ -40,7 +40,7 @@ concavity = st.sidebar.slider("Concavity", 0.0, 1.30, 0.27)
 with open("objetos.pkl", "rb") as arquivo:
   ss, classifier = pickle.load(arquivo)
   
-  df = pd.read_csv('wdbc.csv', names = colunas)
+  #df = pd.read_csv('wdbc.csv', names = colunas)
  
 
   estrutura = {'perimeter': perimeter, 'area': area, 'compactness': compactness, 'concavity': concavity}
