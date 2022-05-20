@@ -4,12 +4,12 @@ import pandas as pd
 import pickle
 import numpy as np
 from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import accuracy_score
+#from sklearn.metrics import accuracy_score
 from PIL import Image
 
   
 st.title('Relatórios Breast Cancer Wisconsin')
-df = pd.read_csv("C:/Users/isadora skibinski/Downloads/wdbc.csv")
+#df = pd.read_csv("C:/Users/isadora skibinski/Downloads/wdbc.csv")
 
 st.header("Informações do conjunto de dados:")
 st.write(
