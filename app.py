@@ -58,11 +58,6 @@ with open("objetos.pkl", "rb") as arquivo:
  
   st.write("### Parâmetros de Entrada")
   st.write(df)
-  
-  
-  st.dataframe(df)
-  df_sample = df.head()
-  df_sample
     
   df = ss.transform(df)
   st.write(df)
@@ -73,8 +68,9 @@ with open("objetos.pkl", "rb") as arquivo:
   predicao = classifier.predict_proba(df)
   predicao = pd.DataFrame(predicao)
   predicao.rename({
-     'M' : 0,
-     'B' : 1
+     0: "M",
+     1: "B",
+     2: "inválido"
   }, axis=1, inplace=True)
   
   st.write("Probabilidades")
