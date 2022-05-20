@@ -24,12 +24,12 @@ IMAGE_URL = "https://miro.medium.com/max/1400/1*51Hm0b9RlgnPVQLariliRw.png"
 st.image(IMAGE_URL, caption="amostra dos dados")
 
 st.sidebar.write("### Parâmetros") #barra lateral com interatividade
-0radius = st.sidebar.slider("Radius", 7.0, 29.0, 15.0)
-0texture = st.sidebar.slider("Texture", 10.0, 40.0, 20.0)
-0smoothness = st.sidebar.slider("Smoothness", 0.06, 1.0, 1.0)
-0concave_points = st.sidebar.slider("Concave", 1.0, 1.0, 1.0)
-0symmetry = st.sidebar.slider("Symmetry", 1.0, 1.0, 1.0)
-0fractal_dimension = st.sidebar.slider("Fractal", 1.0, 1.0, 1.0)
+0radius = st.sidebar.slider("0radius", 7.0, 29.0, 15.0)
+0texture = st.sidebar.slider("0texture", 10.0, 40.0, 20.0)
+0smoothness = st.sidebar.slider("0smoothness", 0.06, 1.0, 1.0)
+0concave_points = st.sidebar.slider("0concave_points", 1.0, 1.0, 1.0)
+0symmetry = st.sidebar.slider("0symmetry", 1.0, 1.0, 1.0)
+0fractal_dimension = st.sidebar.slider("0fractal_dimension", 1.0, 1.0, 1.0)
 
 1radius = st.sidebar.slider("Radius1", 1.0, 3.0, 1.0)
 1texture = st.sidebar.slider("Texture1", 1.0, 5.0, 2.0)
