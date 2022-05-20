@@ -77,7 +77,7 @@ with open("objetos.pkl", "rb") as arquivo:
   #st.write("Probabilidades")
   #st.write(predicao)
   
-  dataframe = pd.DataFrame(np.random.randn(10, 20),
+  dataframe = pd.DataFrame(np.random.randn(10, 20), #dataframe como uma tabela interativa
   columns = ('col %d' % i
     for i in range(20)))
   st.write(dataframe)
