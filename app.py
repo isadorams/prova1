@@ -16,11 +16,13 @@ st.write(
     por agulha fina (PAAF) de uma massa mamária.Eles descrevem características 
     dos núcleos celulares presentes na imagem..""" )
 
+IMAGE_URL = "https://miro.medium.com/max/1400/1*yjsLGG-U9km84AvWLLmK8A.png"
+st.image(IMAGE_URL, caption="Imagem da célula cancerosa")
+
+st.header("Conjunto de dados:")
 IMAGE_URL = "https://miro.medium.com/max/1400/1*51Hm0b9RlgnPVQLariliRw.png"
 st.image(IMAGE_URL, caption="Sunrise by the mountains")
 
-
-st.header("Conjunto de dados:")
 dataframe = pd.DataFrame(np.random.randn(10, 20),
   columns = ('col %d' % i
     for i in range(20)))
