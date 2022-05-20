@@ -24,36 +24,37 @@ IMAGE_URL = "https://miro.medium.com/max/1400/1*51Hm0b9RlgnPVQLariliRw.png"
 st.image(IMAGE_URL, caption="amostra dos dados")
 
 st.sidebar.write("### Parâmetros") #barra lateral com interatividade
-radius = st.sidebar.slider("Radius", 7.8, 36.0, 6.3, 0.1)
-texture = st.sidebar.slider("Texture", 11.0, 50.0, 26.0, 0.1)
-perimeter = st.sidebar.slider("Perimeter", 40.0, 190.0, 100.0)
-area = st.sidebar.slider("Area", 184.0, 4254.0, 881.0)
-smoothness = st.sidebar.slider("Smoothness", 0.06, 0.22, 0.14, 0.1)
-compactness = st.sidebar.slider("Compactness", 0.01, 1.6, 0.25)
-concavity = st.sidebar.slider("Concavity", 0.0, 1.30, 0.27)
-concave = st.sidebar.slider("Concave", 0.0, 0.30, 0.11, 0.1)
-symmetry = st.sidebar.slider("Symmetry", 0.14, 0.66, 0.30, 0.1)
-fractal = st.sidebar.slider("Fractal", 0.054, 0.20, 0.08, 0.1)
-radius1 = st.sidebar.slider("Radius1", 7.8, 36.0, 6.3, 0.1)
-texture1 = st.sidebar.slider("Texture1", 11.0, 50.0, 26.0, 0.1)
-perimeter1 = st.sidebar.slider("Perimeter1", 40.0, 190.0, 100.0)
-area1 = st.sidebar.slider("Area1", 184.0, 4254.0, 881.0)
-smoothness1 = st.sidebar.slider("Smoothness1", 0.06, 0.22, 0.14, 0.1)
-compactness1 = st.sidebar.slider("Compactness1", 0.01, 1.6, 0.25)
-concavity1 = st.sidebar.slider("Concavity1", 0.0, 1.30, 0.27)
-concave1 = st.sidebar.slider("Concave1", 0.0, 0.30, 0.11, 0.1)
+0radius = st.sidebar.slider("Radius",7.0,29.0,4.3, 0.1)
+0texture = st.sidebar.slider("Texture", 11.0, 50.0, 26.0, 0.1)
+0smoothness = st.sidebar.slider("Smoothness", 0.06, 0.22, 0.14, 0.1)
+0concave_points = st.sidebar.slider("Concave", 0.0, 0.30, 0.11, 0.1)
+0symmetry = st.sidebar.slider("Symmetry", 0.14, 0.66, 0.30, 0.1)
+0fractal_dimension = st.sidebar.slider("Fractal", 0.054, 0.20, 0.08, 0.1)
+1radius = st.sidebar.slider("Radius1", 7.8, 36.0, 6.3, 0.1)
+1texture = st.sidebar.slider("Texture1", 11.0, 50.0, 26.0, 0.1)
+1smoothness = st.sidebar.slider("Smoothness1", 0.06, 0.22, 0.14, 0.1)
+1concave_points = st.sidebar.slider("Compactness1", 0.01, 1.6, 0.25)
+1symmetry = st.sidebar.slider("Concavity1", 0.0, 1.30, 0.27)
+1fractal_dimension = st.sidebar.slider("Concave1", 0.0, 0.30, 0.11, 0.1)
+2radius = st.sidebar.slider("Smoothness1", 0.06, 0.22, 0.14, 0.1)
+2texture = st.sidebar.slider("Compactness1", 0.01, 1.6, 0.25)
+2smoothness = st.sidebar.slider("Concavity1", 0.0, 1.30, 0.27)
+2concave_points = st.sidebar.slider("Concave1", 0.0, 0.30, 0.11, 0.1)
+2symmetry = st.sidebar.slider("Compactness1", 0.01, 1.6, 0.25)
+2smoothness = st.sidebar.slider("Concavity1", 0.0, 1.30, 0.27)
+2concave_points = st.sidebar.slider("Concave1", 0.0, 0.30, 0.11, 0.1)
+2fractal_dimension = st.sidebar.slider("Concave1", 0.0, 0.30, 0.11, 0.1)
 
-    
 with open("objetos.pkl", "rb") as arquivo:
   ss, classifier = pickle.load(arquivo)
   
   #df = pd.read_csv('wdbc.csv', names = colunas)
  
 
-  estrutura = {'radius': [radius], 'texture': [texture], 'perimeter': [perimeter], 'area':[area], 'smoothness': [smoothness], 'compactness': [compactness], 
-               'concavity': [concavity], 'concave':[concave], 'symmetry':[symmetry], 'fractal': [fractal], 'radius1': [radius1], 'texture1': [texture1], 'perimeter1': [perimeter1],
-               'area1': [area1], 'smoothness1': [smoothness1], 'compactness1': [compactness1], 
-               'concavity1': [concavity1], 'concave1':[concave1] }
+  estrutura = {'0radius': [0radius], '0texture': [0texture], '0smoothness': [0smoothness], '0concave_points':[0concave_points], '0symmetry':[0symmetry], 
+               '0fractal_dimension': [0fractal_dimension], '1radius': [1radius], '1texture': [1texture], '1smoothness': [1smoothness],
+               '1concave_points': [1concave_points], '1symmetry': [1symmetry], '1fractal_dimension': [1fractal_dimension], '2radius': [2radius], 
+               '2texture':[2texture], '2smoothness': [2smoothness], '2concave_points':[2concave_points],'2symmetry':[2symmetry], '2fractal_dimension': [2fractal_dimension], }
   df = pd.DataFrame(estrutura, index=[0])
  
   st.write("### Parâmetros de Entrada")
