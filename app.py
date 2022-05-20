@@ -24,10 +24,16 @@ IMAGE_URL = "https://miro.medium.com/max/1400/1*51Hm0b9RlgnPVQLariliRw.png"
 st.image(IMAGE_URL, caption="Sunrise by the mountains")
 
 st.sidebar.write("### Parâmetros")
+radios = st.sidebar.slider("Radios", 7.8, 36, 16.3, 0.1)
+texture = st.sidebar.slider("Texture", 11, 50, 26, 0.1)
 perimeter = st.sidebar.slider("Perimeter", 40.0, 190.0, 100.0)
 area= st.sidebar.slider("Area", 184.0, 4254.0, 881.0)
+smoothness = st.sidebar.slider("Smoothness", 0.06, 0.22, 0.14, 0.1)
 compactness = st.sidebar.slider("Compactness", 0.01, 1.6, 0.25)
 concavity = st.sidebar.slider("Concavity", 0.0, 1.30, 0.27)
+concave = st.sidebar.slider("Concave", 0, 0.30, 0.11, 0.1)
+symmetry = st.sidebar.slider("Symmetry", 0.14, 0.66, 0.30, 0.1)
+fractal = st.sidebar.slider("Fractal", 0.054, 0.20, 0.08, 0.1)
 
     
 with open("objetos.pkl", "rb") as arquivo:
@@ -36,7 +42,8 @@ with open("objetos.pkl", "rb") as arquivo:
   #df = pd.read_csv('wdbc.csv', names = colunas)
  
 
-  estrutura = {'perimeter': perimeter, 'area': area, 'compactness': compactness, 'concavity': concavity}
+  estrutura = {'radios': radios,'texture': texture,'perimeter': perimeter, 'area': area, 'smoothness': smoothness, 'compactness': compactness, 
+               'concavity': concavity, 'concave':concave, 'symmetry':symmetry, 'fractal': fractal}
   df = pd.DataFrame(estrutura, index=[0])
  
   st.write("### Parâmetros de Entrada")
@@ -69,8 +76,8 @@ with open("objetos.pkl", "rb") as arquivo:
   st.write(dataframe)
   st.header('Visualização do gráfico de área.')
   st.area_chart(dataframe)
-  st.header('Visualização do histograma.')
-  st.bar_chart(dataframe)
+  #st.header('Visualização do histograma.')
+  s#t.bar_chart(dataframe)
     
    
  st.write("### Informações do atributo:")
