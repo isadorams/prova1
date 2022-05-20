@@ -1,4 +1,5 @@
 import streamlit as st
+from sklearn.neighbors import KNeighborsClassifier  
 #import matplotlib.pyplot as plt
 import pandas as pd
 import pickle
