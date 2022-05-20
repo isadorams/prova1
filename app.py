@@ -50,25 +50,25 @@ with open("objetos.pkl", "rb") as arquivo:
   st.write(df)
   
   
-  #st.dataframe(df)
-  #df_sample = df.head()
-  #df_sample
+  st.dataframe(df)
+  df_sample = df.head()
+  df_sample
     
-  #df = ss.transform(df)
-  #st.write(df)
+  df = ss.transform(df)
+  st.write(df)
   
-  #predicao = classifier.predict(df)
-  #st.write(f"A classe é: **{predicao[0]}**")
+  predicao = classifier.predict(df)
+  st.write(f"A classe é: **{predicao[0]}**")
   
-  #predicao = classifier.predict_proba(df)
-  #predicao = pd.DataFrame(predicao)
-  #predicao.rename({
-     #'M' : 0,
-     #'B' : 1
-  #}, axis=1, inplace=True)
+  predicao = classifier.predict_proba(df)
+  predicao = pd.DataFrame(predicao)
+  predicao.rename({
+     'M' : 0,
+     'B' : 1
+  }, axis=1, inplace=True)
   
-  #st.write("Probabilidades")
-  #st.write(predicao)
+  st.write("Probabilidades")
+  st.write(predicao)
   
   dataframe = pd.DataFrame(np.random.randn(10, 20),
   columns = ('col %d' % i
