@@ -10,7 +10,7 @@ from sklearn.tree import DecisionTreeClassifier
 
   
 st.title('Relatórios Breast Cancer Wisconsin')
-image = Image.open('celulas.png')
+image = Image.open('C:\Users\isadora skibinski\celulas.png')
 st.image(image, caption = 'This is a picture', use_column_width = True)
 #st.write("## Breast Cancer Wisconsin")
 st.header("Informações do conjunto de dados:")
