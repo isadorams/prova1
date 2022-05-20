@@ -31,8 +31,8 @@ st.sidebar.write("### Parâmetros") #barra lateral com interatividade
 0symmetry = st.sidebar.slider("Symmetry", 1.0, 1.0, 1.0)
 0fractal_dimension = st.sidebar.slider("Fractal", 1.0, 1.0, 1.0)
 
-1radius = st.sidebar.slider("Radius1", 1.0, 3.0, 6.3, 1.0)
-1texture = st.sidebar.slider("Texture1", 1.0, 5.0, 26.0, 2.0)
+1radius = st.sidebar.slider("Radius1", 1.0, 3.0, 1.0)
+1texture = st.sidebar.slider("Texture1", 1.0, 5.0, 2.0)
 1smoothness = st.sidebar.slider("Smoothness1", 1.0, 1.0, 1.0)
 1concave_points = st.sidebar.slider("Compactness1", 1.0, 1.0, 1.0)
 1symmetry = st.sidebar.slider("Concavity1", 1.0, 1.0, 1.0)
