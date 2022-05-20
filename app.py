@@ -21,7 +21,7 @@ st.image(IMAGE_URL, caption="Imagem da célula cancerosa")
 
 st.header("Conjunto de dados:")
 IMAGE_URL = "https://miro.medium.com/max/1400/1*51Hm0b9RlgnPVQLariliRw.png"
-st.image(IMAGE_URL, caption="Sunrise by the mountains")
+st.image(IMAGE_URL, caption="amostra dos dados")
 
 st.sidebar.write("### Parâmetros")
 radius = st.sidebar.slider("Radius", 7.8, 36.0, 6.3, 0.1)
@@ -63,7 +63,8 @@ with open("objetos.pkl", "rb") as arquivo:
   st.write(df)
   
   predicao = classifier.predict(df)
-  st.write(f"A classe é: **{predicao[0]}**")
+  st.write("**A classe desse cancer é:**")
+  st.write(predicao)
   
   predicao = classifier.predict_proba(df)
   predicao = pd.DataFrame(predicao)
