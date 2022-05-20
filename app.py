@@ -8,7 +8,6 @@ from sklearn.preprocessing import StandardScaler
 from PIL import Image
 from gsheetsdb import connect
 
-public_gsheets_url = "https://docs.google.com/spreadsheets/d/1_sgQYbgsOLYpNyhocWXk3DmBunaavLrYEyffBpK7IpU/edit?usp=sharing"
 
 conn = connect()
 
