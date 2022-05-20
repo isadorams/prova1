@@ -7,6 +7,7 @@ import pickle
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeClassifier
+from PIL import Image
 
   
 st.title('Relatórios Breast Cancer Wisconsin')
@@ -17,8 +18,8 @@ st.write(
     por agulha fina (PAAF) de uma massa mamária.Eles descrevem características 
     dos núcleos celulares presentes na imagem..""" )
 
-#image = Image.open('celulas.png')
-#st.image(image, caption = 'This is a picture', use_column_width = True)
+image = Image.open('celulas.png')
+st.image(image, caption = 'This is a picture', use_column_width = True)
 
 st.header("Conjunto de dados:")
 dataframe = pd.DataFrame(np.random.randn(10, 20),
