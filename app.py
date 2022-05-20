@@ -62,20 +62,20 @@ with open("objetos.pkl", "rb") as arquivo:
   df = ss.transform(df)
   st.write(df)
   
-  #predicao = classifier.predict(df)
-  #st.write("**A classe desse cancer é:**")
-  #st.write(predicao)
+  predicao = classifier.predict(df)
+  st.write("**A classe desse cancer é:**")
+  st.write(predicao)
   
-  #predicao = classifier.predict_proba(df)
-  #predicao = pd.DataFrame(predicao)
-  #predicao.rename({
-     #0: "M",
-     #1: "B",
-     #2: "inválido"
-  #}, axis=1, inplace=True)
+  predicao = classifier.predict_proba(df)
+  predicao = pd.DataFrame(predicao)
+  predicao.rename({
+     0: "M",
+     1: "B",
+     2: "inválido"
+  }, axis=1, inplace=True)
   
-  #st.write("Probabilidades")
-  #st.write(predicao)
+  st.write("Probabilidades")
+  st.write(predicao)
   
   dataframe = pd.DataFrame(np.random.randn(10, 20), #dataframe como uma tabela interativa
   columns = ('col %d' % i
