@@ -77,14 +77,14 @@ with open("objetos.pkl", "rb") as arquivo:
   st.header('Visualização do gráfico de área.')
   st.area_chart(dataframe)
   #st.header('Visualização do histograma.')
-  s#t.bar_chart(dataframe)
+  #st.bar_chart(dataframe)
     
    
- st.write("### Informações do atributo:")
- st.write( """ a. perímetro(soma dos tamanhos dos lados da figura)""" )
- st.write( """ b. área (medida total que uma figura ocupa no plano)""" )
- st.write( """ c. compacidade (perímetro^2 / área - 1,0)""" )
- st.write( """ d. concavidade (severidade das porções côncavas do contorno).""" )
+  st.write("### Informações do atributo:")
+  st.write( """ a. perímetro(soma dos tamanhos dos lados da figura)""" )
+  st.write( """ b. área (medida total que uma figura ocupa no plano)""" )
+  st.write( """ c. compacidade (perímetro^2 / área - 1,0)""" )
+  st.write( """ d. concavidade (severidade das porções côncavas do contorno).""" )
 
 
 
