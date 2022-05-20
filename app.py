@@ -50,10 +50,10 @@ with open("objetos.pkl", "rb") as arquivo:
   #df = pd.read_csv('wdbc.csv', names = colunas)
  
 
-  estrutura = {'radius': radius, 'texture': texture, 'perimeter': perimeter, 'area': area, 'smoothness': smoothness, 'compactness': compactness, 
-               'concavity': concavity, 'concave':concave, 'symmetry':symmetry, 'fractal': fractal, 'radius1': radius1, 'texture1': texture1, 'perimeter1': perimeter1,
-               'area1': area1, 'smoothness1': smoothness1, 'compactness1': compactness1, 
-               'concavity1': concavity1, 'concave1':concave1 }
+  estrutura = {'radius': [radius], 'texture': [texture], 'perimeter': [perimeter], 'area':[area], 'smoothness': [smoothness], 'compactness': [compactness], 
+               'concavity': [concavity], 'concave':[concave], 'symmetry':[symmetry], 'fractal': [fractal], 'radius1': [radius1], 'texture1': [texture1], 'perimeter1': [perimeter1],
+               'area1': [area1], 'smoothness1': [smoothness1], 'compactness1': [compactness1], 
+               'concavity1': [concavity1], 'concave1':[concave1] }
   df = pd.DataFrame(estrutura, index=[0])
  
   st.write("### Parâmetros de Entrada")
