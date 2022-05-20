@@ -6,25 +6,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 #from sklearn.metrics import accuracy_score
 from PIL import Image
-from gsheetsdb import connect
-
-
-conn = connect()
-
-# Perform SQL query on the Google Sheet.
-# Uses st.cache to only rerun when the query changes or after 10 min.
-@st.cache(ttl=600)
-def run_query(query):
-    rows = conn.execute(query, headers=1)
-    rows = rows.fetchall()
-    return rows
-
-sheet_url = st.secrets["public_gsheets_url"]
-rows = run_query(f'SELECT * FROM "{sheet_url}"')
-
-# Print results.
-for row in rows:
-    st.write(f"{row.name} has a :{row.pet}:")
+#from gsheetsdb import connect
 
   
 st.title('Relatórios Breast Cancer Wisconsin')
@@ -34,37 +16,37 @@ st.write(
     por agulha fina (PAAF) de uma massa mamária.Eles descrevem características 
     dos núcleos celulares presentes na imagem..""" )
 
-#image = Image.open(r'C:\Users\isadora skibinski\Downloads\celulas.png', 'r')
-#st.image(image, caption = 'This is a picture', use_column_width = True)
+image = Image.open(r'C:\Users\isadora skibinski\Downloads\celulas.png', 'r')
+st.image(image, caption = 'This is a picture', use_column_width = True)
 
-#st.header("Conjunto de dados:")
-#dataframe = pd.DataFrame(np.random.randn(10, 20),
-  #columns = ('col %d' % i
-    #for i in range(20)))
-#st.write(dataframe)
-#st.header('Visualização do gráfico de área.')
-#st.area_chart(dataframe)
-#st.header('Visualização do histograma.')
-#st.bar_chart(dataframe)
+st.header("Conjunto de dados:")
+dataframe = pd.DataFrame(np.random.randn(10, 20),
+  columns = ('col %d' % i
+    for i in range(20)))
+st.write(dataframe)
+st.header('Visualização do gráfico de área.')
+st.area_chart(dataframe)
+st.header('Visualização do histograma.')
+st.bar_chart(dataframe)
          
-#st.sidebar.write("### Parâmetros")
-#perimeter = st.sidebar.slider("Perimeter", 40.0, 190.0, 100.0)
-#area= st.sidebar.slider("Area", 184.0, 4254.0, 881.0)
-#compactness = st.sidebar.slider("Compactness", 0.01, 1.6, 0.25)
-#concavity = st.sidebar.slider("Concavity", 0.0, 1.30, 0.27)
+st.sidebar.write("### Parâmetros")
+perimeter = st.sidebar.slider("Perimeter", 40.0, 190.0, 100.0)
+area= st.sidebar.slider("Area", 184.0, 4254.0, 881.0)
+compactness = st.sidebar.slider("Compactness", 0.01, 1.6, 0.25)
+concavity = st.sidebar.slider("Concavity", 0.0, 1.30, 0.27)
 
     
-#with open("objetos.pkl", "rb") as arquivo:
-  #ss, classifier = pickle.load(arquivo)
+with open("objetos.pkl", "rb") as arquivo:
+  ss, classifier = pickle.load(arquivo)
   
   #df = pd.read_csv('wdbc.csv', names = colunas)
  
 
-  #estrutura = {'perimeter': perimeter, 'area': area, 'compactness': compactness, 'concavity': concavity}
-  #df = pd.DataFrame(estrutura, index=[0])
+  estrutura = {'perimeter': perimeter, 'area': area, 'compactness': compactness, 'concavity': concavity}
+  df = pd.DataFrame(estrutura, index=[0])
  
-  #st.write("### Parâmetros de Entrada")
-  #st.write(df)
+  st.write("### Parâmetros de Entrada")
+  st.write(df)
   
   
   #st.dataframe(df)
@@ -88,11 +70,11 @@ st.write(
   #st.write(predicao)
     
    
-  #st.header("Informações do atributo:")
-  #st.write( """ a. perímetro(soma dos tamanhos dos lados da figura)""" )
-  #st.write( """ b. área (medida total que uma figura ocupa no plano)""" )
-  #st.write( """ c. compacidade (perímetro^2 / área - 1,0)""" )
-  #st.write( """ d. concavidade (severidade das porções côncavas do contorno).""" )
+  st.header("Informações do atributo:")
+  st.write( """ a. perímetro(soma dos tamanhos dos lados da figura)""" )
+  st.write( """ b. área (medida total que uma figura ocupa no plano)""" )
+  st.write( """ c. compacidade (perímetro^2 / área - 1,0)""" )
+  st.write( """ d. concavidade (severidade das porções côncavas do contorno).""" )
 
   
 
