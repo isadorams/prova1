@@ -59,7 +59,7 @@ with open("objetos.pkl", "rb") as arquivo:
                'radius2': [radius2],'texture2':[texture2], 'smoothness2': [smoothness2], 'concave_points2':[concave_points2], 'symmetry2':[symmetry2], 'fractal_dimension2': [fractal_dimension2]}
   df = pd.DataFrame(estrutura, index=[0])
  
-  st.write("### Parâmetros de Entrada")
+  st.write("### Parâmetros de Entrada") #dps algoritmo de normalização
   st.write(df)
     
   df = ss.transform(df)
