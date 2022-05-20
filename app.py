@@ -47,8 +47,9 @@ with open("objetos.pkl", "rb") as arquivo:
   st.write("### Parâmetros de Entrada")
   st.write(df)
   
-  df_sample = df.head()
-  df_sample
+  st.dataframe(df)
+  #df_sample = df.head()
+  #df_sample
     
   #df = ss.transform(df)
   #st.write(df)
