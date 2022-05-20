@@ -11,14 +11,16 @@ from sklearn.tree import DecisionTreeClassifier
   
 st.title('Relatórios Breast Cancer Wisconsin')
 
-#image = Image.open('celulas.png')
-#st.image(image, caption = 'This is a picture', use_column_width = True)
-
 st.header("Informações do conjunto de dados:")
 st.write(
     """As características são computadas a partir de uma imagem digitalizada de um aspirado
     por agulha fina (PAAF) de uma massa mamária.Eles descrevem características 
     dos núcleos celulares presentes na imagem..""" )
+
+#image = Image.open('celulas.png')
+#st.image(image, caption = 'This is a picture', use_column_width = True)
+df_sample = df.head()
+df_sample
 
 st.header("Conjunto de dados:")
 dataframe = pd.DataFrame(np.random.randn(10, 20),
