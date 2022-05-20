@@ -19,8 +19,6 @@ st.write(
 
 #image = Image.open('celulas.png')
 #st.image(image, caption = 'This is a picture', use_column_width = True)
-df_sample = df.head()
-df_sample
 
 st.header("Conjunto de dados:")
 dataframe = pd.DataFrame(np.random.randn(10, 20),
@@ -47,6 +45,9 @@ with open("objetos.pkl", "rb") as arquivo:
  
   st.write("### Parâmetros de Entrada")
   st.write(df)
+  
+  df_sample = df.head()
+  df_sample
     
   #df = ss.transform(df)
   #st.write(df)
