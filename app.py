@@ -42,7 +42,7 @@ radius2 = st.sidebar.slider("radius2", 8.0, 37.0, 17.0)
 texture2 = st.sidebar.slider("texture2", 12.0, 50.0, 26.0)
 smoothness2 = st.sidebar.slider("smoothness2", 0.0, 1.0, 1.0)
 concave_points2 = st.sidebar.slider("concave_points2", 0.0, 1.0, 1.0)
-symmetry0 = st.sidebar.slider("symmetry0", 0.2, 1.0, 1.0)
+symmetry2 = st.sidebar.slider("symmetry0", 0.2, 1.0, 1.0)
 fractal_dimension2 = st.sidebar.slider("fractal_dimension2", 0.0, 1.0, 1.0)
 
 with open("objetos.pkl", "rb") as arquivo:
@@ -55,8 +55,7 @@ with open("objetos.pkl", "rb") as arquivo:
                'fractal_dimension0': [fractal_dimension0], 
                'radius1': [radius1], 'texture1': [texture1], 'smoothness1': [smoothness1], 'concave_points1': [concave_points1],
                'symmetry1': [symmetry1], 'fractal_dimension1': [fractal_dimension1], 
-               'radius2': [radius2],'texture2':[texture2], 'smoothness2': [smoothness2], 'concave_points2':[concave_points2],
-               'symmetry2':[symmetry2], 'fractal_dimension2': [fractal_dimension2]}
+               'radius2': [radius2],'texture2':[texture2], 'smoothness2': [smoothness2], 'concave_points2':[concave_points2], 'symmetry2':[symmetry2], 'fractal_dimension2': [fractal_dimension2]}
   df = pd.DataFrame(estrutura, index=[0])
  
   st.write("### Parâmetros de Entrada")
