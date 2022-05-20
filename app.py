@@ -22,7 +22,7 @@ dataframe = pd.DataFrame(np.random.randn(10, 20),
   columns = ('col %d' % i
     for i in range(20)))
 st.write(dataframe)
-st.write('Visualização do gráfico de área.')
+st.header('Visualização do gráfico de área.')
 st.area_chart(dataframe)
          
 st.sidebar.write("### Parâmetros")
